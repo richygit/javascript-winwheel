@@ -1744,7 +1744,9 @@ Winwheel.prototype.startAnimation = function()
 
         // Do the tween animation passing the properties from the animation object as an array of key => value pairs.
         // Keep reference to the tween object in the wheel as that allows pausing, resuming, and stopping while the animation is still running.
-        this.tween = TweenMax.to(this, this.animation.duration, properties);
+
+        this.tween = gsap.to(this, this.animation.duration, properties);
+        //this.tween = TweenMax.to(this, this.animation.duration, properties);
     }
 }
 
